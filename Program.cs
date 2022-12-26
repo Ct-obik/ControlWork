@@ -6,7 +6,14 @@
 
 Console.Clear();
 
-Console.Write("Введите количество чисел: ");
+Console.Write("Введите количество элементов массива: ");
 int userNum = int.Parse(Console.ReadLine() ?? "");
+string[] array = FillArray(userNum);
 
-Console.WriteLine(userNum);
+string[] FillArray(int n)
+{
+    string[] fillArray = new string[n];
+    Console.WriteLine($"Введите элемент массива:");
+    for (int i = 0; i < n; i++) fillArray[i] = Console.ReadLine() ?? "";    
+    return fillArray;
+}
