@@ -10,7 +10,7 @@ Console.Write("Введите количество элементов масси
 int userNum = int.Parse(Console.ReadLine() ?? "");
 string[] array = FillArray(userNum);
 string[] newArray = FindElementsInArray(array);
-Console.Write($"{String.Join(", ", newArray)}");
+Console.WriteLine($"[{String.Join(" ", array)}]  ->  [{String.Join(" ", newArray)}]");
 
 string[] FillArray(int n)
 {
